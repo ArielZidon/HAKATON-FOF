@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python convert_clusters_to_fields_v2.py:*)"
+    ]
+  }
+}
