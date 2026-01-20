@@ -80,8 +80,8 @@ def generate_gif_constant_bounds(csv_file, gif_file="clusters_constant_bounds.gi
 
 
 if __name__ == "__main__":
-    generate_gif_constant_bounds("cluster_samples_random_clusters.csv",
-                                 gif_file="clusters_constant_bounds.gif",
+    generate_gif_constant_bounds("dynamic_clusters.csv",
+                                 gif_file="dynamic_clusters_constant_bounds.gif",
                                  duration=0.5)
 
 
