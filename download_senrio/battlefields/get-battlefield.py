@@ -53,7 +53,7 @@ def main():
     service_key = Path(
         os.environ.get(
             "SERVICE_KEY",
-            str(base_dir.parent.parent.parent / "smart-fridge-c19d3-firebase-adminsdk-k1q6g-7e57222140.json"),
+            str(base_dir.parent.parent.parent / "smart-fridge-c19d3-firebase-adminsdk-k1q6g-67e73c776b.json"),
         )
     )
 
