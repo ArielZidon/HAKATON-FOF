@@ -1,0 +1,28 @@
+{
+  "model_type": "random_forest",
+  "model_params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1
+  },
+  "feature_names": [
+    "friend_count",
+    "foe_count",
+    "friend_centroid_lon",
+    "friend_centroid_lat",
+    "foe_centroid_lon",
+    "foe_centroid_lat",
+    "target_to_friend_centroid_km",
+    "target_to_foe_centroid_km",
+    "friend_to_foe_centroid_km",
+    "nearest_friend_km",
+    "nearest_foe_km",
+    "friend_mean_spread_km",
+    "foe_mean_spread_km",
+    "friend_mean_distance_to_centroid_km",
+    "foe_mean_distance_to_centroid_km",
+    "target_nearest_delta_km"
+  ],
+  "metrics_path": "/home/noamhev/git/HAKATON-FOF/model_coordinate/reports/metrics_20260120_110513.json"
+}
