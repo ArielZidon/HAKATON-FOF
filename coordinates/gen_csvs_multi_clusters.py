@@ -2,7 +2,7 @@ import csv
 import random
 import math
 
-def generate_cluster(center, num_points=5, spread=0.0001):
+def generate_cluster(center, num_points=5, spread=0.00015):
     """Generate a small cluster of coordinates around a center"""
     cluster = []
     for _ in range(num_points):
@@ -38,7 +38,7 @@ def closest_cluster(target, friend_list, foe_list):
                   sum(c[1] for c in foe_list)/len(foe_list)]
     return "friend" if distance(target, friend_center) < distance(target, foe_center) else "foe"
 
-def generate_samples(num_samples=50, output_file="cluster_samples_random_clusters.csv"):
+def generate_samples(num_samples=20, output_file="cluster_samples_random_clusters.csv"):
     with open(output_file, mode="w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["friend_pos_list","foe_pos_list","target_coor","label"])
         writer.writeheader()
@@ -48,6 +48,9 @@ def generate_samples(num_samples=50, output_file="cluster_samples_random_cluster
         foe_bounds = [[33.283, 35.546], [33.290, 35.556]]
 
         for _ in range(num_samples):
+            if friend_bounds[1][0] < 33.290:
+                friend_bounds[1][0] += 0.0002
+                friend_bounds[0][0] += 0.0002
             # Random number of clusters (1-3) for each list
             friend_pos_list, friend_centers = generate_random_clusters((1, 3), friend_bounds)
             foe_pos_list, foe_centers = generate_random_clusters((1, 3), foe_bounds)
@@ -62,6 +65,9 @@ def generate_samples(num_samples=50, output_file="cluster_samples_random_cluster
                 target_coor = generate_cluster(target_center, num_points=1, spread=0.005)[0]
 
             label = closest_cluster(target_coor, friend_pos_list, foe_pos_list)
+            if random.random() < 0.2:
+                # Introduce some noise in labeling
+                label = "foe" if label == "friend" else "friend"
 
             writer.writerow({
                 "friend_pos_list": str(friend_pos_list),
@@ -73,4 +79,4 @@ def generate_samples(num_samples=50, output_file="cluster_samples_random_cluster
     print(f"CSV generated: {output_file}")
 
 if __name__ == "__main__":
-    generate_samples(num_samples=20)
+    generate_samples(num_samples=50)
