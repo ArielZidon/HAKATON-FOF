@@ -99,5 +99,63 @@
       }
     });
   </script>
+  <script>
+  let csvIndex = 1;
+  const csvLayerGroup = L.layerGroup().addTo(map);
+
+  function parsePythonList(str) {
+    return JSON.parse(str.replace(/'/g, '"'));
+  }
+
+  async function loadCSV(index) {
+    const res = await fetch(`split_csvs/row_${index}.csv`);
+    if (!res.ok) return; // stop when file doesn't exist
+
+    const text = await res.text();
+    const lines = text.trim().split("\n");
+    if (lines.length < 2) return;
+
+    const headers = lines[0].split(",");
+    const values = lines[1].split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
+
+    const row = {};
+    headers.forEach((h, i) => {
+      row[h.trim()] = values[i].trim().replace(/^"|"$/g, "");
+    });
+
+    const friends = parsePythonList(row.friend_pos_list);
+    const foes = parsePythonList(row.foe_pos_list);
+    const target = parsePythonList(row.target_coor);
+    const label = row.label;
+
+    csvLayerGroup.clearLayers();
+
+    friends.forEach(([lat, lng]) => {
+      L.circleMarker([lat, lng], {
+        radius: 6,
+        color: "blue",
+        fillOpacity: 0.8
+      }).addTo(csvLayerGroup);
+    });
+
+    foes.forEach(([lat, lng]) => {
+      L.circleMarker([lat, lng], {
+        radius: 6,
+        color: "red",
+        fillOpacity: 0.8
+      }).addTo(csvLayerGroup);
+    });
+
+    L.marker(target).addTo(csvLayerGroup)
+      .bindPopup(`Target: ${label}`)
+      .openPopup();
+  }
+
+  // Auto-advance like frames
+  setInterval(async () => {
+    const ok = await loadCSV(csvIndex);
+    if (ok !== false) csvIndex++;
+  }, 1000); // 1 CSV per second
+</script>
 </body>
 </html>
