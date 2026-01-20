@@ -9,23 +9,19 @@ from google.cloud import storage as gcs_storage
 
 BASE_DIR = Path(__file__).resolve().parent
 
-SERVICE_KEY = BASE_DIR / "friend-or-foe-hakaton-firebase-adminsdk-fbsvc-d48c764a88.json"
-PROJECT_BUCKET = os.environ.get("PROJECT_BUCKET", "friend-or-foe-hakaton.appspot.com")
+# Prefer SERVICE_KEY env var, otherwise fall back to the known key at repo root.
+SERVICE_KEY = Path(
+    os.environ.get(
+        "SERVICE_KEY",
+        str(BASE_DIR.parent.parent / "smart-fridge-c19d3-firebase-adminsdk-k1q6g-67e73c776b.json"),
+    )
+)
+PROJECT_BUCKET = os.environ.get("PROJECT_BUCKET", "smart-fridge-c19d3.appspot.com")
 BATTLEFIELD_ID = "battlefield_001"
 
 FRIENDS_CSV_LOCAL = BASE_DIR.parent / "coordinates" / "friend.csv"
 FOES_CSV_LOCAL = BASE_DIR.parent / "coordinates" / "foe.csv"
 
-
-# =========================
-# 5. Dummy inference – Geo model
-# =========================
-def geo_model_stub(csv_file):
-    df = pd.read_csv(csv_file)
-    return {
-        "prediction": "foe" if len(df) % 2 == 0 else "friend",
-        "confidence": 0.7
-    }
 
 def main():
     if not SERVICE_KEY.exists():
@@ -76,35 +72,13 @@ def main():
     doc_ref.set({
         "friends_csv": f"battlefields/{BATTLEFIELD_ID}_friends.csv",
         "foes_csv": f"battlefields/{BATTLEFIELD_ID}_foes.csv",
-        "status": "uploaded"
+        "status": "uploaded",
     })
     print("✅ Firestore document created")
 
-    # =========================
-    # 4. קריאה חזרה של CSV (לדוגמה)
-    # =========================
-    friends_dl = bucket.blob(f"battlefields/{BATTLEFIELD_ID}_friends.csv")
-    friends_dl.download_to_filename(str(friends_dl_path))
-
-    foes_dl = bucket.blob(f"battlefields/{BATTLEFIELD_ID}_foes.csv")
-    foes_dl.download_to_filename(str(foes_dl_path))
-
-    print("✅ CSV files downloaded back from Firebase Storage")
-
-    geo_result = geo_model_stub(str(friends_dl_path))
-
-    # =========================
-    # 6. שמירת פלט מודל ל-Firestore
-    # =========================
-    doc_ref.update({
-        "status": "processed",
-        "model_outputs": {
-            "geo_model": geo_result
-        }
-    })
-
-    print("✅ Dummy model output saved to Firestore")
-    print("🎉 Pipeline complete!")
+    # Stop here: data push completed.
+    print("🎉 Data push complete!")
+    return
 
 
 if __name__ == "__main__":
