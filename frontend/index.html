@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Map Click -> Server</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    #map { height: 80vh; }
+    #panel { padding: 12px; }
+    #result { white-space: pre; background: #f5f5f5; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="panel">
+    <div><b>Click on the map</b> to send coordinates to the server.</div>
+    <div id="result">Waiting for click...</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const SERVER_URL = "http://127.0.0.1:8000/query";
+
+    // Your points: [lat, lng]
+    const points = [
+      [33.28875, 35.53925],
+      [33.29121, 35.56258],
+      [33.26074, 35.55622],
+      [33.27201, 35.54889],
+      [33.28875, 35.53925],
+    ];
+
+    const map = L.map("map");
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+
+    // Markers for the given points
+    points.forEach((p, idx) => {
+      L.marker(p)
+        .addTo(map)
+        .bindPopup(`Point ${idx + 1}<br>lat=${p[0]}<br>lng=${p[1]}`);
+    });
+
+    // Fit map to show all points
+    const bounds = L.latLngBounds(points);
+    map.fitBounds(bounds.pad(0.2));
+
+    // Optional: connect them with a line (order matters)
+    L.polyline(points, { weight: 4 }).addTo(map);
+
+    let clickMarker = null;
+
+    async function sendCoord(lat, lng) {
+      // Leaflet gives lat/lng. Server expects x/y.
+      // Common mapping: x = lng, y = lat
+      const payload = { coord: { x: lng, y: lat } };
+
+      const res = await fetch(SERVER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`Server error ${res.status}: ${text}`);
+      }
+      return res.json();
+    }
+
+    map.on("click", async (e) => {
+      const lat = e.latlng.lat;
+      const lng = e.latlng.lng;
+
+      if (clickMarker) clickMarker.remove();
+      clickMarker = L.marker([lat, lng]).addTo(map);
+
+      const resultEl = document.getElementById("result");
+      resultEl.textContent = `Sending...\nlat=${lat}\nlng=${lng}`;
+
+      try {
+        const data = await sendCoord(lat, lng);
+        const mr = data.model_result || {};
+        resultEl.textContent =
+          `Clicked:\nlat=${lat}\nlng=${lng}\n\nModel result:\n` +
+          `vector1: ${(mr.vector1_percent ?? 0).toFixed(2)}%\n` +
+          `vector2: ${(mr.vector2_percent ?? 0).toFixed(2)}%\n\n` +
+          `Raw response:\n${JSON.stringify(data, null, 2)}`;
+      } catch (err) {
+        resultEl.textContent = `Error:\n${err.message}`;
+      }
+    });
+  </script>
+</body>
+</html>
