@@ -2,6 +2,22 @@ import csv
 import random
 import math
 
+FRIEND_ADVANTAGE_REGION = {
+    "lat_min": 33.283,
+    "lat_max": 33.290,
+    "lon_min": 35.546,
+    "lon_max": 35.552
+}
+
+
+
+def in_region(center, region):
+    lat, lon = center
+    return (
+        region["lat_min"] <= lat <= region["lat_max"] and
+        region["lon_min"] <= lon <= region["lon_max"]
+    )
+
 def generate_cluster(center, num_points=5, spread=0.0005):
     """Generate points around a cluster center"""
     cluster = []
@@ -16,11 +32,14 @@ def distance(coord1, coord2):
 
 def closest_cluster(target, friend_list, foe_list):
     """Label target based on closest cluster centers"""
-    friend_center = [sum(c[0] for c in friend_list)/len(friend_list),
-                     sum(c[1] for c in friend_list)/len(friend_list)]
-    foe_center = [sum(c[0] for c in foe_list)/len(foe_list),
-                  sum(c[1] for c in foe_list)/len(foe_list)]
-    return "friend" if distance(target, friend_center) < distance(target, foe_center) else "foe"
+    ret = "friend"
+    if len(foe_list) > 0:
+        friend_center = [sum(c[0] for c in friend_list)/len(friend_list),
+                        sum(c[1] for c in friend_list)/len(friend_list)]
+        foe_center = [sum(c[0] for c in foe_list)/len(foe_list),
+                    sum(c[1] for c in foe_list)/len(foe_list)]
+        ret = "friend" if distance(target, friend_center) < distance(target, foe_center) else "foe"
+    return ret if random.random() > 0.1 else ("foe" if ret == "friend" else "friend")  # 10% noise
 
 def generate_dynamic_clusters(num_samples=20,
                               cluster_prob_change=0.3,
@@ -53,15 +72,32 @@ def generate_dynamic_clusters(num_samples=20,
             center_lat = random.uniform(foe_bounds[0][0], foe_bounds[1][0])
             center_lon = random.uniform(foe_bounds[0][1], foe_bounds[1][1])
             foe_clusters.append([center_lat, center_lon])
-
+        foe_removal_prob = 0
+        has_advanced = False
+        advanced_id = 0
+        fwd_prob = 0.2
         for sample_idx in range(num_samples):
             # Move clusters with some probability
             for i in range(len(friend_clusters)):
                 if random.random() < cluster_prob_change:
                     friend_clusters[i][0] += random.uniform(-0.0005,0.0005)
-                    friend_clusters[i][1] += random.uniform(-0.0005,0.0002)
-                if random.random() < 0.3 and friend_clusters[i][0] < 33.285:
-                    friend_clusters[i][0] += random.uniform(-0.0005,0.0005) + 0.002
+                    friend_clusters[i][1] += random.uniform(-0.001,0.0002)
+                if random.random() < fwd_prob and friend_clusters[i][0] < 33.285:
+                    friend_clusters[i][0] += random.uniform(-0.0005,0.0005) + 0.001
+                if not has_advanced and random.random() < 0.05 and friend_clusters[i][0] < 33.285:
+                    has_advanced = True
+                    friend_clusters[i][0] = 33.285 + random.uniform(-0.002, 0.0002)
+                    foe_removal_prob = 0.02
+                    fwd_prob = 0.4
+                    advanced_id = i
+                if i != advanced_id and in_region(friend_clusters[i], FRIEND_ADVANTAGE_REGION):
+                    foe_removal_prob = 0.1
+            remaining_foe_clusters = []
+            for cluster in foe_clusters:
+                if random.random() >= foe_removal_prob:
+                    remaining_foe_clusters.append(cluster)
+
+            foe_clusters = remaining_foe_clusters
                 
             for i in range(len(foe_clusters)):
                 if random.random() < cluster_prob_change:
