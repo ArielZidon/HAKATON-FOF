@@ -26,6 +26,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     const SERVER_URL = "http://127.0.0.1:8000/query";
+    const CLASSIFICATION_FILE_URL = "./last_Classification_output.txt";
 
     // Your points: [lat, lng]
     const points = [
@@ -76,6 +77,29 @@
       return res.json();
     }
 
+    async function readClassificationFile() {
+      // cache: "no-store" helps avoid browser caching old content
+      const res = await fetch(CLASSIFICATION_FILE_URL, { cache: "no-store" });
+      if (!res.ok) {
+        throw new Error(`Cannot read ${CLASSIFICATION_FILE_URL} (${res.status})`);
+      }
+      return res.text();
+    }
+
+    function formatClassificationText(text) {
+      const t = (text || "").trim();
+      if (!t) return "No classification output found (file is empty).";
+
+      // If file contains a single number -> show as percent nicely
+      const num = Number(t.replace("%", "").trim());
+      if (!Number.isNaN(num) && t.match(/^-?\d+(\.\d+)?%?$/)) {
+        return `Classification: ${num.toFixed(2)}%`;
+      }
+
+      // Otherwise show raw text
+      return `Classification output:\n${t}`;
+    }
+
     map.on("click", async (e) => {
       const lat = e.latlng.lat;
       const lng = e.latlng.lng;
@@ -87,13 +111,17 @@
       resultEl.textContent = `Sending...\nlat=${lat}\nlng=${lng}`;
 
       try {
-        const data = await sendCoord(lat, lng);
-        const mr = data.model_result || {};
+        // 1) send to server
+        await sendCoord(lat, lng);
+
+        // 2) read file content after server wrote it
+        const fileText = await readClassificationFile();
+
+        // 3) show nicely
         resultEl.textContent =
-          `Clicked:\nlat=${lat}\nlng=${lng}\n\nModel result:\n` +
-          `vector1: ${(mr.vector1_percent ?? 0).toFixed(2)}%\n` +
-          `vector2: ${(mr.vector2_percent ?? 0).toFixed(2)}%\n\n` +
-          `Raw response:\n${JSON.stringify(data, null, 2)}`;
+          `Clicked:\nlat=${lat}\nlng=${lng}\n\n` +
+          formatClassificationText(fileText);
+
       } catch (err) {
         resultEl.textContent = `Error:\n${err.message}`;
       }

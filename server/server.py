@@ -2,47 +2,59 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from pathlib import Path
-import json
-import time
+import subprocess
+import sys
 
-app = FastAPI(title="Coordinate Server")
+app = FastAPI(title="Inference Server")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # development only
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-OUT_FILE = Path("last_coord.json")
+BASE_DIR = Path(__file__).resolve().parent
 
 class Coord(BaseModel):
-    x: float
-    y: float
+    x: float  # longitude (lng)
+    y: float  # latitude  (lat)
 
 class QueryPayload(BaseModel):
     coord: Coord
 
 @app.post("/query")
 def query(payload: QueryPayload):
-    x = payload.coord.x
-    y = payload.coord.y
+    longitude = payload.coord.x
+    latitude = payload.coord.y
 
-    print(f"[FROM SERVER] Received coord: x={x}, y={y}")
+    cmd = [
+        sys.executable, str(BASE_DIR / "inference.py"),
+        "--model-path", str(BASE_DIR / "models" / "trained_model.pkl"),
+        "--state-files",
+        str(BASE_DIR / "coordinates" / "field1.csv"),
+        str(BASE_DIR / "coordinates" / "field2.csv"),
+        str(BASE_DIR / "coordinates" / "field3.csv"),
+        "--longitude", str(longitude),
+        "--latitude", str(latitude),
+    ]
 
-    data = {
-        "ts": time.time(),
-        "coord": {"x": x, "y": y}
-    }
-
-    # Overwrite file on every request
-    with OUT_FILE.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    p = subprocess.run(
+        cmd,
+        cwd=str(BASE_DIR),
+        capture_output=True,
+        text=True
+    )
+    
+    # Print on server terminal
+    print("[RUN]", " ".join(cmd))
+    print("[STDOUT]\n", p.stdout)
+    if p.stderr:
+        print("[STDERR]\n", p.stderr)
 
     return {
-        "status": "ok",
-        "message": "from server (saved to last_coord.json)",
-        "saved_file": str(OUT_FILE),
-        "received": {"x": x, "y": y},
+        "returncode": p.returncode,
+        "stdout": p.stdout,
+        "stderr": p.stderr,
     }
