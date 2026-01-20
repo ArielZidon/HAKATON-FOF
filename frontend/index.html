@@ -99,19 +99,32 @@
       }
     });
   </script>
-  <script>
+<script>
   let csvIndex = 1;
   const csvLayerGroup = L.layerGroup().addTo(map);
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
   function parsePythonList(str) {
     return JSON.parse(str.replace(/'/g, '"'));
   }
 
-  async function loadCSV(index) {
-    const res = await fetch(`split_csvs/row_${index}.csv`);
-    if (!res.ok) return; // stop when file doesn't exist
+  async function tryLoadCSV(index) {
+    const res = await fetch(`split_csvs3/row_${index}.csv`, { cache: "no-store" });
 
-    const text = await res.text();
+    if (!res.ok) {
+      if (res.status === 404) {
+        return null; // not ready yet
+      }
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    return await res.text();
+  }
+
+  function renderCSV(text) {
     const lines = text.trim().split("\n");
     if (lines.length < 2) return;
 
@@ -145,13 +158,36 @@
         fillOpacity: 0.8
       }).addTo(csvLayerGroup);
     });
+
+    L.marker(target)
+      .addTo(csvLayerGroup)
+      .bindPopup(`Target: ${label}`)
+      .openPopup();
   }
 
-  // Auto-advance like frames
-  setInterval(async () => {
-    const ok = await loadCSV(csvIndex);
-    if (ok !== false) csvIndex++;
-  }, 1000); // 1 CSV per second
+  // 🔁 Main loop: wait until file exists
+  async function csvPlaybackLoop() {
+    while (true) {
+      try {
+        const text = await tryLoadCSV(csvIndex);
+
+        if (text === null) {
+          await sleep(500); // wait and retry same index
+          continue;
+        }
+
+        renderCSV(text);
+        csvIndex++;         // advance only on success
+        await sleep(1000);  // frame delay
+
+      } catch (err) {
+        console.error(err);
+        await sleep(1000);
+      }
+    }
+  }
+
+  csvPlaybackLoop();
 </script>
 </body>
 </html>
