@@ -1,0 +1,1715 @@
+Found 22 field files
+======================================================================
+CROSS-VALIDATION: COMPARING MODEL TYPES
+======================================================================
+Grid files: 22
+Model types: ['random_forest', 'gradient_boosting', 'neural_network']
+Strategy: Leave-One-Out Cross-Validation
+======================================================================
+Loaded grid 'field1': 15 points from coordinates/field1.csv
+Loaded grid 'field2': 11 points from coordinates/field2.csv
+Loaded grid 'field3': 18 points from coordinates/field3.csv
+Loaded grid 'field4': 19 points from coordinates/field4.csv
+Loaded grid 'field5': 14 points from coordinates/field5.csv
+Loaded grid 'field6': 19 points from coordinates/field6.csv
+Loaded grid 'field7': 16 points from coordinates/field7.csv
+Loaded grid 'field8': 13 points from coordinates/field8.csv
+Loaded grid 'field9': 18 points from coordinates/field9.csv
+Loaded grid 'field10': 12 points from coordinates/field10.csv
+Loaded grid 'field11': 22 points from coordinates/field11.csv
+Loaded grid 'field12': 16 points from coordinates/field12.csv
+Loaded grid 'field13': 21 points from coordinates/field13.csv
+Loaded grid 'field14': 27 points from coordinates/field14.csv
+Loaded grid 'field15': 16 points from coordinates/field15.csv
+Loaded grid 'field16': 18 points from coordinates/field16.csv
+Loaded grid 'field17': 5 points from coordinates/field17.csv
+Loaded grid 'field18': 16 points from coordinates/field18.csv
+Loaded grid 'field19': 17 points from coordinates/field19.csv
+Loaded grid 'field20': 15 points from coordinates/field20.csv
+Loaded grid 'field21': 9 points from coordinates/field21.csv
+Loaded grid 'field22': 4 points from coordinates/field22.csv
+
+Loaded 22 grids
+Total data points: 341
+
+======================================================================
+Testing Model: RANDOM_FOREST
+======================================================================
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  1/22 - field1      : Acc=1.0000, F1=1.0000, N=15
+Added training grid 'field1': 15 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  2/22 - field2      : Acc=1.0000, F1=1.0000, N=11
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  3/22 - field3      : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  4/22 - field4      : Acc=0.6842, F1=0.7267, N=19
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  5/22 - field5      : Acc=1.0000, F1=1.0000, N=14
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  6/22 - field6      : Acc=1.0000, F1=1.0000, N=19
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  7/22 - field7      : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  8/22 - field8      : Acc=1.0000, F1=1.0000, N=13
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  9/22 - field9      : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 10/22 - field10     : Acc=1.0000, F1=1.0000, N=12
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 11/22 - field11     : Acc=1.0000, F1=1.0000, N=22
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 12/22 - field12     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 13/22 - field13     : Acc=1.0000, F1=1.0000, N=21
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 14/22 - field14     : Acc=1.0000, F1=1.0000, N=27
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 15/22 - field15     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 16/22 - field16     : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 17/22 - field17     : Acc=1.0000, F1=1.0000, N= 5
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 18/22 - field18     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 19/22 - field19     : Acc=1.0000, F1=1.0000, N=17
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 20/22 - field20     : Acc=1.0000, F1=1.0000, N=15
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 21/22 - field21     : Acc=1.0000, F1=1.0000, N= 9
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+
+Total training grids: 21
+  Fold 22/22 - field22     : Acc=1.0000, F1=1.0000, N= 4
+
+  Summary for random_forest:
+    Mean Accuracy: 0.9856 ± 0.0658
+    Mean F1 Score: 0.9876 ± 0.0569
+    Range: [0.6842, 1.0000]
+    Training Time: 5.69s
+
+======================================================================
+Testing Model: GRADIENT_BOOSTING
+======================================================================
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  1/22 - field1      : Acc=1.0000, F1=1.0000, N=15
+Added training grid 'field1': 15 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  2/22 - field2      : Acc=1.0000, F1=1.0000, N=11
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  3/22 - field3      : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  4/22 - field4      : Acc=1.0000, F1=1.0000, N=19
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  5/22 - field5      : Acc=1.0000, F1=1.0000, N=14
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  6/22 - field6      : Acc=1.0000, F1=1.0000, N=19
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  7/22 - field7      : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  8/22 - field8      : Acc=1.0000, F1=1.0000, N=13
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  9/22 - field9      : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 10/22 - field10     : Acc=1.0000, F1=1.0000, N=12
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 11/22 - field11     : Acc=1.0000, F1=1.0000, N=22
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 12/22 - field12     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 13/22 - field13     : Acc=1.0000, F1=1.0000, N=21
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 14/22 - field14     : Acc=1.0000, F1=1.0000, N=27
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 15/22 - field15     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 16/22 - field16     : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 17/22 - field17     : Acc=1.0000, F1=1.0000, N= 5
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 18/22 - field18     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 19/22 - field19     : Acc=1.0000, F1=1.0000, N=17
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 20/22 - field20     : Acc=1.0000, F1=1.0000, N=15
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 21/22 - field21     : Acc=1.0000, F1=1.0000, N= 9
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+
+Total training grids: 21
+  Fold 22/22 - field22     : Acc=1.0000, F1=1.0000, N= 4
+
+  Summary for gradient_boosting:
+    Mean Accuracy: 1.0000 ± 0.0000
+    Mean F1 Score: 1.0000 ± 0.0000
+    Range: [1.0000, 1.0000]
+    Training Time: 0.94s
+
+======================================================================
+Testing Model: NEURAL_NETWORK
+======================================================================
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  1/22 - field1      : Acc=1.0000, F1=1.0000, N=15
+Added training grid 'field1': 15 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  2/22 - field2      : Acc=1.0000, F1=1.0000, N=11
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  3/22 - field3      : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  4/22 - field4      : Acc=1.0000, F1=1.0000, N=19
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  5/22 - field5      : Acc=1.0000, F1=1.0000, N=14
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  6/22 - field6      : Acc=1.0000, F1=1.0000, N=19
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  7/22 - field7      : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  8/22 - field8      : Acc=1.0000, F1=1.0000, N=13
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold  9/22 - field9      : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 10/22 - field10     : Acc=1.0000, F1=1.0000, N=12
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 11/22 - field11     : Acc=1.0000, F1=1.0000, N=22
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 12/22 - field12     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 13/22 - field13     : Acc=1.0000, F1=1.0000, N=21
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 14/22 - field14     : Acc=1.0000, F1=1.0000, N=27
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 15/22 - field15     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 16/22 - field16     : Acc=1.0000, F1=1.0000, N=18
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 17/22 - field17     : Acc=1.0000, F1=1.0000, N= 5
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 18/22 - field18     : Acc=1.0000, F1=1.0000, N=16
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 19/22 - field19     : Acc=1.0000, F1=1.0000, N=17
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 20/22 - field20     : Acc=1.0000, F1=1.0000, N=15
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 21
+  Fold 21/22 - field21     : Acc=1.0000, F1=1.0000, N= 9
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+
+Total training grids: 21
+  Fold 22/22 - field22     : Acc=1.0000, F1=1.0000, N= 4
+
+  Summary for neural_network:
+    Mean Accuracy: 1.0000 ± 0.0000
+    Mean F1 Score: 1.0000 ± 0.0000
+    Range: [1.0000, 1.0000]
+    Training Time: 1.61s
+
+======================================================================
+MODEL COMPARISON TABLE
+======================================================================
+
+            Model Mean Accuracy Std Dev Mean F1 Min Acc Max Acc Time (s)
+    RANDOM_FOREST        0.9856  0.0658  0.9876  0.6842  1.0000      5.7
+GRADIENT_BOOSTING        1.0000  0.0000  1.0000  1.0000  1.0000      0.9
+   NEURAL_NETWORK        1.0000  0.0000  1.0000  1.0000  1.0000      1.6
+
+🏆 BEST MODEL: GRADIENT_BOOSTING
+   Mean Accuracy: 1.0000
+   Mean F1 Score: 1.0000
+
+📊 Saved visualization to: cross_validation_results.png
+
+======================================================================
+TRAINING FINAL MODEL ON ALL DATA
+======================================================================
+Model type: GRADIENT_BOOSTING
+Training on ALL 22 grids
+Added training grid 'field1': 15 labeled points
+Added training grid 'field2': 11 labeled points
+Added training grid 'field3': 18 labeled points
+Added training grid 'field4': 19 labeled points
+Added training grid 'field5': 14 labeled points
+Added training grid 'field6': 19 labeled points
+Added training grid 'field7': 16 labeled points
+Added training grid 'field8': 13 labeled points
+Added training grid 'field9': 18 labeled points
+Added training grid 'field10': 12 labeled points
+Added training grid 'field11': 22 labeled points
+Added training grid 'field12': 16 labeled points
+Added training grid 'field13': 21 labeled points
+Added training grid 'field14': 27 labeled points
+Added training grid 'field15': 16 labeled points
+Added training grid 'field16': 18 labeled points
+Added training grid 'field17': 5 labeled points
+Added training grid 'field18': 16 labeled points
+Added training grid 'field19': 17 labeled points
+Added training grid 'field20': 15 labeled points
+Added training grid 'field21': 9 labeled points
+Added training grid 'field22': 4 labeled points
+
+Total training grids: 22
+
+Training complete!
+Total samples: 341
+Class distribution: {np.int64(0): 158, np.int64(1): 183}
+
+💾 Model saved to: models/best_model.pkl
+
+Model Information:
+  Model type: gradient_boosting
+  Training grids: 22
+  Total training points: 341
+
+📄 Saved report to: FINAL_CV_RESULTS.md
+
+======================================================================
+✅ CROSS-VALIDATION COMPLETE!
+======================================================================
+
+🏆 Winner: GRADIENT_BOOSTING
+📊 Visualization: cross_validation_results.png
+💾 Saved Model: models/best_model.pkl
+📄 Report: FINAL_CV_RESULTS.md
+======================================================================
